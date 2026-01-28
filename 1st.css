@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f1c4d, #1e3c72);
+  color: white;
+  text-align: center;
+}
+
+#loading {
+  padding-top: 40vh;
+}
+
+.bar {
+  width: 200px;
+  height: 4px;
+  background: #4f6cff;
+  margin: 20px auto;
+  animation: load 2.5s linear infinite;
+}
+
+@keyframes load {
+  from { width: 0; }
+  to { width: 200px; }
+}
+
+.hidden {
+  display: none;
+}
+
+#proposal {
+  padding: 25px;
+}
+
+#proposal img {
+  width: 200px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 30px rgba(79,108,255,0.9);
+}
+
+.line {
+  opacity: 0;
+  animation: fadeText 1s forwards;
+}
+
+.line:nth-child(2) { animation-delay: 1s; }
+.line:nth-child(3) { animation-delay: 2s; }
+.line:nth-child(4) { animation-delay: 3s; }
+.line:nth-child(5) { animation-delay: 4s; }
+.line:nth-child(6) { animation-delay: 5s; }
+
+.line.big {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@keyframes fadeText {
+  to { opacity: 1; }
+}
+
+.buttons button {
+  margin: 10px;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: #4f6cff;
+  color: white;
+}
+#start {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+}
+/* Hearts */
+.hearts::before {
+  content: "💙 💙 💙 💙 💙";
+  position: fixed;
+  bottom: -20px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  animation: floatHearts 4s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatHearts {
+  to { transform: translateY(-110vh); }
+}
